@@ -14,7 +14,7 @@ def train():
 
     df = df.drop(columns=["Timestamp"])
 
-    # separate labels (names) from features
+    # separate labels (names) from featuresf
     y = df['FirstLast']
     X = df.drop(columns=['FirstLast'])
 
@@ -36,7 +36,7 @@ def train():
     clf.fit(X, y_encoded)
 
     ## print decision tree structure
-    # print(tree.plot_tree(clf, feature_names=features))
+    tree.plot_tree(clf, feature_names=features)
     return clf, features, le_y, label_encoders
 
 # ui to interactively traverse decision tree with yes/no
