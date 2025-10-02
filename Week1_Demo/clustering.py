@@ -4,7 +4,7 @@ from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 
-data = pd.read_csv("board_members.csv")
+data = pd.read_csv("data_415.csv")
 
 names = data["FirstLast"]
 
@@ -44,7 +44,7 @@ plt.scatter(reduced[:,0], reduced[:,1], c=clusters, cmap='tab10', s=80, alpha=0.
 
 # names to plot
 for i, name in enumerate(names):
-    plt.text(reduced[i,0]+0.02, reduced[i,1]+0.02, f'{name.split(' ')[0]} {name.split(' ')[1][0]}.', fontsize=5)
+    plt.text(reduced[i,0]+0.02, reduced[i,1]+0.02, name, fontsize=3)
 
 plt.title("Board Members Clustered (k=5)")
 plt.xlabel("PCA Component 1")
