@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 # training the dt
 def train():
     # load sample dataset
-    df = pd.read_csv("board_members.csv")
+    df = pd.read_csv("data_415.csv")
 
     # map year to integer
     year_map = {'First Year': 0, 'Second Year': 1, 'Third Year': 2, 'Fourth Year': 3}
