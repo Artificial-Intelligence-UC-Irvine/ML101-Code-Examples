@@ -1,3 +1,5 @@
 .venv
 Week1_Demo/.venv
 .DS_Store
+.ipynb_checkpoints/
+.virtual_documents/
